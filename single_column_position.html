@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>单列布局</title>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /*1. absolute 绝对定位*/
+        .container  {
+            position: relative;
+            width: 500px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .top {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background-color: red;
+        }
+
+        .main {
+            position: absolute;
+            top: 100px;
+            bottom: 50px;
+            width: 100%;
+            background-color: green;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: blue;
+        }
+
+        /* 2. flex 布局
+        .container  {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .top,
+        .footer {
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        .top {
+            width: 100%;
+            flex-basis: 100px;
+            background-color: red;
+        }
+
+        .main {
+            flex: 1;
+            width: 100%;
+            background-color: green;
+        }
+
+        .footer {
+            width: 100%;
+            flex-basis: 50px;
+            background-color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">Top</div>
+        <div class="main">Main</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
